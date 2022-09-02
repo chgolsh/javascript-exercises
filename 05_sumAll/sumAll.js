@@ -1,10 +1,8 @@
-const sumAll = function(start, end){
-    let sum = 0;
-    if ((start < 0 || end < 0) || 
-        !(typeof(start) === "number" && typeof(end) === "number")){
-            return "ERROR";
-        }
+const sumAll = function(min, max){
+    if (start < 0 || end < 0) return "ERROR";
+    if (!typeof(start) === "number" && !typeof(end) === "number") return "ERROR";
     if (start > end) [start, end] = [end, start];
+    let sum = 0;
     for (let num = start; num <= end; num++){
         sum += num;
     }
